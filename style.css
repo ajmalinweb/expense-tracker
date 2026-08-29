@@ -320,24 +320,3 @@ h3 {
   }
 
 }
-
-/* ==========================================================================
-   Desktops & Laptops (1024px and up)
-   ========================================================================== */
-@media (min-width: 1024px) {
-
-  /* Example: Max out layout width so it doesn't stretch infinitely */
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-}
-
-/* ==========================================================================
-   Large Screens / Ultra-wide (1200px and up)
-   ========================================================================== */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}

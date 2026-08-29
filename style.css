@@ -1,0 +1,343 @@
+:root {
+  --background-1: #73a1be;
+  --background-2: rgb(63, 106, 140);
+  --button: rgb(79, 105, 151);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(https://i.pinimg.com/1200x/b3/21/0d/b3210dc1436ece79bf9b8ef7b8ba7f0f.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+.expense-tracker {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  margin-inline: 2em;
+  border-radius: 1em;
+  background: #ffffffad;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px)
+}
+
+.head-section {
+  font-size: 1.1em;
+}
+
+.balance-section {
+  width: 100%;
+  text-align: center;
+  padding: 0.6em 1.4em 1.4em 1.4em;
+  margin-top: 2em;
+  border-radius: 1em;
+  background: linear-gradient(180deg, var(--background-1), var(--background-2));
+}
+
+#balance {
+  padding-block: 0.5em;
+  font-size: 2.4em;
+}
+
+#income,
+#expense {
+  padding-top: 0.2em;
+  font-size: 1.6em;
+}
+
+.summary-card-income {
+  color: rgb(32, 143, 32);
+}
+
+.summary-card-expense {
+  color: rgb(198, 0, 0);
+}
+
+.balance-board {
+  padding: 1em;
+}
+
+.bg-white {
+  width: 100%;
+  background: #fff;
+  padding-block: 1em;
+  border-radius: 1em;
+}
+
+.summary-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.1em;
+}
+
+.transaction-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5em;
+  gap: 1em;
+}
+
+.transaction-section section {
+  width: 50%;
+}
+
+.transaction-section h3 {
+  font-size: 1.2em;
+}
+
+.transaction-details {
+  display: flex;
+  flex-direction: column;
+  margin-block: 0.7em;
+}
+
+.transaction-details label,
+.transaction-details input,
+.transaction-details span {
+  display: inline-block;
+  margin-block: 0.3em;
+  font-weight: 500;
+  color: rgb(81, 81, 81);
+}
+
+.transaction-details input {
+  padding: 0.8em 1em;
+  border: 2px solid rgba(128, 128, 128, 0.2);
+  border-radius: 0.3em;
+  font-size: 1em;
+}
+
+.transaction-details span {
+  font-size: 0.8em;
+  color: rgba(81, 81, 81, 0.75);
+
+}
+
+.transactions {
+  margin-top: 0.8em;
+  margin-right: 0.7em;
+  font-weight: 500;
+  height: 280px;
+  overflow: auto;
+  border-radius: 1em;
+  scrollbar-width: none;
+}
+
+#list {
+  padding: 0.8em;
+}
+
+.transactions:hover {
+  scrollbar-width: thin;
+  margin-right: 0;
+}
+
+.transactions-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3em;
+  background-color: #fff;
+  border-radius: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.82em 1.3em 0.82em 1.1em;
+  transition: transform 0.15s;
+}
+
+.add-transaction {
+  padding: 1em;
+  border-radius: 0.4em;
+  background-color: rgba(222, 226, 231, 0.25);
+}
+
+.add-transaction-btn {
+  width: 100%;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  background-color: var(--button);
+  padding-block: 1.2em;
+  margin: 0.2em;
+}
+
+.del-btn {
+  display: none;
+  padding: 0.3em;
+  cursor: pointer;
+  border-radius: 1em;
+  color: red;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
+
+.transactions-list:hover {
+  .del-btn {
+    display: inline;
+  }
+
+  padding: 0.82em 0 0.82em 1.1em;
+  transform: scale(1.03);
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 0.5em;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  .expense-tracker {
+    width: 100%;
+    padding: 1em;
+    margin-inline: 2em;
+    backdrop-filter: blur(5px);
+    background: #ffffff8e;
+  }
+
+  .head-section {
+    font-size: 1.1em;
+  }
+
+  .balance-section {
+    padding: 0.6em 1em 1em 1em;
+    margin-top: 1em;
+  }
+
+  #balance {
+    padding-block: 0.5em;
+    font-size: 2.4em;
+  }
+
+  #income,
+  #expense {
+    padding-top: 0.2em;
+    font-size: 1.6em;
+  }
+
+  .balance-board {
+    padding: 0.5em;
+  }
+
+  .bg-white {
+    border-radius: 0.8em;
+  }
+
+  .summary-card {
+    column-gap: 1em;
+  }
+
+  .transaction-section {
+    flex-direction: column;
+    margin-top: 1em;
+  }
+
+  .transaction-section section {
+    width: 100%;
+  }
+
+  .transaction-details {
+    margin-block: 0.4em;
+  }
+
+  .transaction-details input {
+    padding: 0.6em;
+    font-size: 1.2em;
+  }
+
+  .transaction-details input::placeholder {
+    color: #9c9c9c;
+    font-weight: 500;
+  }
+
+  .transaction-details span {
+    font-size: 0.8em;
+    color: rgba(81, 81, 81, 0.75);
+
+  }
+
+  .transactions {
+    height: 400px;
+  }
+
+  #list {
+    padding: 0.6em;
+  }
+
+  .transactions-list {
+    font-size: 1.2em;
+    margin-bottom: 0.4em;
+  }
+
+  .add-transaction {
+    padding: 0.8em;
+    border-radius: 0.5em;
+  }
+
+  .add-transaction-btn {
+    font-size: 1em;
+    padding-block: 1em;
+  }
+
+}
+
+/* ==========================================================================
+   Desktops & Laptops (1024px and up)
+   ========================================================================== */
+@media (min-width: 1024px) {
+
+  /* Example: Max out layout width so it doesn't stretch infinitely */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+/* ==========================================================================
+   Large Screens / Ultra-wide (1200px and up)
+   ========================================================================== */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
